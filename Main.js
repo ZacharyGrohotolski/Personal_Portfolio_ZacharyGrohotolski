@@ -15,15 +15,15 @@ buttons.forEach(button => {
 });
 
 // ================= DARK MODE =================
-const toggleButton = document.getElementById("darkModeToggle");
+const darkSwitch = document.getElementById("darkSwitch");
 
-if (toggleButton) {
-    toggleButton.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
+if (darkSwitch) {
+    darkSwitch.addEventListener("change", function () {
+        document.body.classList.toggle("bg-dark");
+        document.body.classList.toggle("text-white");
     });
 }
-
-// ================= IMAGE HOVER (optional fix) =================
+// ================= IMAGE HOVER =================
 const projectImage = document.getElementById("projectImage");
 
 if (projectImage) {
@@ -34,4 +34,5 @@ if (projectImage) {
     projectImage.addEventListener("mouseout", function () {
         projectImage.style.transform = "scale(1)";
     });
+
 }
